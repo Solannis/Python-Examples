@@ -1,183 +1,486 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<panels>
-  <panel category="pie">
-    <name lang="en">Pie Panel 1</name>
-	<loc lang="en">Directly above HP1 (front)</loc>
-	<desc lang="en">Remaining Pie Panel numbers run counter-clockwise from this panel</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>0</addr_port>
-  </panel>
+<devices>
+	<panels>
+		<panel category="pie">
+			<name lang="en">Pie Panel 1</name>
+			<loc lang="en">Directly above HP1 (front)</loc>
+			<desc lang="en">Remaining Pie Panel numbers run counter-clockwise from this panel</desc>
+			<code>DPP1</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>0</addr_port>
+		</panel>
 
-  <panel category="pie">
-    <name lang="en">Pie Panel 2</name>
-	<loc lang="en">Above Dome Panel 4 and Magic Panel</loc>
-	<desc lang="en">Typical location of Life Form Scanner</desc>
-	<connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>1</addr_port>
-  </panel>
+		<panel category="pie">
+			<name lang="en">Pie Panel 2</name>
+			<loc lang="en">Above Dome Panel 4 and Magic Panel</loc>
+			<desc lang="en">Typical location of Life Form Scanner</desc>
+			<code>DPP2</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>1</addr_port>
+		</panel>
 
-  <panel category="pie">
-    <name lang="en">Pie Panel 3</name>
-	<loc lang="en">Above Dome Bumps and Dome Panel 7</loc>
-	<desc lang="en">Typical location of HP3 (top)</desc>
-    <connected>false</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>2</addr_port>
-  </panel>
+		<panel category="pie">
+			<name lang="en">Pie Panel 3</name>
+			<loc lang="en">Above Dome Bumps and Dome Panel 7</loc>
+			<desc lang="en">Typical location of HP3 (top)</desc>
+			<code>DPP3</code>
+			<connected>false</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>2</addr_port>
+		</panel>
 
-  <panel category="pie">
-    <name lang="en">Pie Panel 4</name>
-	<loc lang="en">Above HP2 (rear) and the Rear Logic Display</loc>
-	<desc lang="en">Typical location of Periscope</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>3</addr_port>
-  </panel>
+		<panel category="pie">
+			<name lang="en">Pie Panel 4</name>
+			<loc lang="en">Above HP2 (rear) and the Rear Logic Display</loc>
+			<desc lang="en">Typical location of Periscope</desc>
+			<code>DPP4</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>3</addr_port>
+		</panel>
 
-  <panel category="pie">
-    <name lang="en">Pie Panel 5</name>
-	<loc lang="en">Above Dome Panel 9 and Dome Panel 10</loc>
-	<desc lang="en">Above the two largest dome panels</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>4</addr_port>
-  </panel>
+		<panel category="pie">
+			<name lang="en">Pie Panel 5</name>
+			<loc lang="en">Above Dome Panel 9 and Dome Panel 10</loc>
+			<desc lang="en">Above the two largest dome panels</desc>
+			<code>DPP5</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>4</addr_port>
+		</panel>
 
-  <panel category="pie">
-    <name lang="en">Pie Panel 6</name>
-	<loc lang="en">Above Front Logic Displays</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>5</addr_port>
-  </panel>
+		<panel category="pie">
+			<name lang="en">Pie Panel 6</name>
+			<loc lang="en">Above Front Logic Displays</loc>
+			<desc lang="en"></desc>
+			<code>"DPP6"</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>5</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 1</name>
-	<loc lang="en">Below Pie Panel 1, to the right of HP1 (front)</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>6</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 1</name>
+			<loc lang="en">Below Pie Panel 1, to the right of HP1 (front)</loc>
+			<code>DP01</code>
+			<desc lang="en"></desc>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>6</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 2</name>
-	<loc lang="en">To the right of Dome Panel 1</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>7</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 2</name>
+			<loc lang="en">To the right of Dome Panel 1</loc>
+			<code>DP02</code>
+			<desc lang="en"></desc>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>7</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 3</name>
-	<loc lang="en">To the right of Dome Panel 2</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>8</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 3</name>
+			<loc lang="en">To the right of Dome Panel 2</loc>
+			<code>DP03</code>
+			<desc lang="en"></desc>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>8</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 4</name>
-	<loc lang="en">To the right of Dome Panel 3</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>9</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 4</name>
+			<loc lang="en">To the right of Dome Panel 3</loc>
+			<code>DP04</code>
+			<desc lang="en"></desc>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>9</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">The Magic Panel (Dome Panel 5)</name>
-	<loc lang="en">To the right of Dome Panel 4</loc>
-	<desc lang="en">Typically a lighting feature, not servoed</desc>
-    <connected>false</connected>
-    <addr_i2c>99</addr_i2c>
-    <addr_port>99</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">The Magic Panel (Dome Panel 5)</name>
+			<loc lang="en">To the right of Dome Panel 4</loc>
+			<desc lang="en">Typically a lighting feature, not servoed</desc>
+			<code>DP05</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 6</name>
-	<loc lang="en">Above the Magic Panel, to the right of Dome Panel 4</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>10</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 6</name>
+			<loc lang="en">Above the Magic Panel, to the right of Dome Panel 4</loc>
+			<desc lang="en"></desc>
+			<code>DP06</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>10</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 7</name>
-	<loc lang="en">To the right of Dome Panel 5</loc>
-	<desc lang="en">Usually left silver colored</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>11</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 7</name>
+			<loc lang="en">To the right of Dome Panel 5</loc>
+			<desc lang="en">Usually left silver colored</desc>
+			<code>DP07</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>11</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 8</name>
-	<loc lang="en">To the right of Dome Panel 7, just below the dome bumps</loc>
-	<desc lang="en">Multi-part panel, typical location of Rear PSI, not servoed</desc>
-    <connected>false</connected>
-    <addr_i2c>99</addr_i2c>
-    <addr_port>99</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 8</name>
+			<loc lang="en">To the right of Dome Panel 7, just below the dome bumps</loc>
+			<desc lang="en">Multi-part panel, typical location of Rear PSI, not servoed</desc>
+			<code>DP08</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 9</name>
-	<loc lang="en">To the right of HP2 (rear)</loc>
-	<desc lang="en">Large, multi-part panel, all colored blue, not servoed</desc>
-    <connected>false</connected>
-    <addr_i2c>99</addr_i2c>
-    <addr_port>99</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 9</name>
+			<loc lang="en">To the right of HP2 (rear)</loc>
+			<desc lang="en">Large, multi-part panel, all colored blue, not servoed</desc>
+			<code>DP09</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 10</name>
-	<loc lang="en">To the right of Dome Panel 9</loc>
-	<desc lang="en">Large, single-part panel, colored blue</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>12</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 10</name>
+			<loc lang="en">To the right of Dome Panel 9</loc>
+			<desc lang="en">Large, single-part panel, colored blue</desc>
+			<code>DP10</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>12</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 11</name>
-	<loc lang="en">To the left of Front Logic Displays</loc>
-	<desc lang="en"></desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>13</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 11</name>
+			<loc lang="en">To the left of Front Logic Displays</loc>
+			<desc lang="en"></desc>
+			<code>DP11</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>13</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 12</name>
-	<loc lang="en">Front Logic Displays</loc>
-	<desc lang="en">Border around displays, colored blue, not servoed</desc>
-    <connected>false</connected>
-    <addr_i2c>99</addr_i2c>
-    <addr_port>99</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 12</name>
+			<loc lang="en">Front Logic Displays</loc>
+			<desc lang="en">Border around displays, colored blue, not servoed</desc>
+			<code>DP12</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 13</name>
-	<loc lang="en">To the right of Front Logic Displays and left of Front PSI</loc>
-	<desc lang="en">Short panel, under radar eye</desc>
-    <connected>true</connected>
-    <addr_i2c>40</addr_i2c>
-    <addr_port>14</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 13</name>
+			<loc lang="en">To the right of Front Logic Displays and left of Front PSI</loc>
+			<desc lang="en">Short panel, under radar eye</desc>
+			<code>DP13</code>
+			<connected>true</connected>
+			<addr_i2c>40</addr_i2c>
+			<addr_port>14</addr_port>
+		</panel>
 
-  <panel category="dome">
-    <name lang="en">Dome Panel 14</name>
-	<loc lang="en">To the left of HP1 (front)</loc>
-	<desc lang="en">Typical location of Front PSI, not servoed</desc>
-    <connected>false</connected>
-    <addr_i2c>99</addr_i2c>
-    <addr_port>99</addr_port>
-  </panel>
+		<panel category="dome">
+			<name lang="en">Dome Panel 14</name>
+			<loc lang="en">To the left of HP1 (front)</loc>
+			<desc lang="en">Typical location of Front PSI, not servoed</desc>
+			<code>DP14</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
 
-</panels>
+		<panel category="body">
+			<name lang="en">Body Panel 1</name>
+			<loc lang="en">Tall panel nearest right leg, front</loc>
+			<desc lang="en">Typical location of CPU Probe arm</desc>
+			<code>BP01</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>0</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 2</name>
+			<loc lang="en">Small panel below Utility Arms, above Coin Slots, front</loc>
+			<desc lang="en">Typical location of Upper Charge Bay and Zapper Arm</desc>
+			<code>BP02</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>1</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 3</name>
+			<loc lang="en">Panel below Upper Charge Bay, next to Coin Slots, front</loc>
+			<desc lang="en">Typical location of Lower Charge Bay</desc>
+			<code>BP03</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>2</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 4</name>
+			<loc lang="en">Medium panel under Utility Arms, next to Front Vents, front</loc>
+			<desc lang="en">Typical location of Data Panel and Saw Blade Arm</desc>
+			<code>BP04</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>3</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 5</name>
+			<loc lang="en">Tall panel nearest left leg, front</loc>
+			<desc lang="en">Typical location of HD Arm</desc>
+			<code>BP05</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>4</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 6</name>
+			<loc lang="en">Small panel under Coin Slots and Body Panel 3, front</loc>
+			<desc lang="en"></desc>
+			<code>BP06</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 7</name>
+			<loc lang="en">Small panel under Front Vents, front</loc>
+			<desc lang="en"></desc>
+			<code>BP07</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 8</name>
+			<loc lang="en">Small panel under Body Panel 4, front</loc>
+			<desc lang="en"></desc>
+			<code>BP08</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 9</name>
+			<loc lang="en">Small panel under Body Panel 5, front</loc>
+			<desc lang="en"></desc>
+			<code>BP04</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 10</name>
+			<loc lang="en">Tall panel nearest left leg, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP10</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 11</name>
+			<loc lang="en">Wide panel between tall panels, below dome, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP11</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 12</name>
+			<loc lang="en">Medium panel nearest Body Panel 10, under Body Panel 11, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP12</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 13</name>
+			<loc lang="en">Medium panel, center, under Body Panel 11, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP13</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 14</name>
+			<loc lang="en">Medium panel nearest Body Panel 15, under Body Panel 11, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP14</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 15</name>
+			<loc lang="en">Tall panel nearest right leg, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP15</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 16</name>
+			<loc lang="en">Small panel under Body Panel 12, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP16</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 17</name>
+			<loc lang="en">Small panel under Body Panel 13, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP17</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 18</name>
+			<loc lang="en">Small panel under Body Panel 14, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP18</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+
+		<panel category="body">
+			<name lang="en">Body Panel 19</name>
+			<loc lang="en">Small under Body Panel 15, rear</loc>
+			<desc lang="en"></desc>
+			<code>BP19</code>
+			<connected>false</connected>
+			<addr_i2c>99</addr_i2c>
+			<addr_port>99</addr_port>
+		</panel>
+	</panels>
+
+	<holoprojectors>
+		<holoprojector category="hplight">
+			<name lang="en">Holoprojector 1 - Light</name>
+			<loc lang="en">Between front PSI and Dome Panel 1</loc>
+			<desc lang="en">Front HP, Princess Leia HP</desc>
+			<code>HP1L</code>
+			<connected>true</connected>
+			<addr_i2c>50</addr_i2c>
+			<addr_port>0</addr_port>
+		</holoprojector>
+
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 1 - Servo X</name>
+			<loc lang="en">Between front PSI and Dome Panel 1</loc>
+			<desc lang="en">Front HP, Princess Leia HP</desc>
+			<code>HP1X</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>10</addr_port>
+		</holoprojector>
+
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 1 - Servo Y</name>
+			<loc lang="en">Between front PSI and Dome Panel 1</loc>
+			<desc lang="en">Front HP, Princess Leia HP</desc>
+			<code>HP1Y</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>11</addr_port>
+		</holoprojector>
+
+		<holoprojector category="hplight">
+			<name lang="en">Holoprojector 2</name>
+			<loc lang="en">Between front Dome Panel 8 and Dome Panel 9</loc>
+			<desc lang="en">Rear HP</desc>
+			<code>HP2L</code>
+			<connected>true</connected>
+			<addr_i2c>50</addr_i2c>
+			<addr_port>1</addr_port>
+		</holoprojector>
+
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 2 - Servo X</name>
+			<loc lang="en">Between front Dome Panel 8 and Dome Panel 9</loc>
+			<desc lang="en">Rear HP</desc>
+			<code>HP2X</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>12</addr_port>
+		</holoprojector>
+  
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 2 - Servo Y</name>
+			<loc lang="en">Between front Dome Panel 8 and Dome Panel 9</loc>
+			<desc lang="en">Rear HP</desc>
+			<code>HP2Y</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>13</addr_port>
+		</holoprojector>
+  
+		<holoprojector category="hplight">
+			<name lang="en">Holoprojector 3</name>
+			<loc lang="en">Pie Panel 3</loc>
+			<desc lang="en">Top HP, Upper HP</desc>
+			<code>HP3L</code>
+			<connected>true</connected>
+			<addr_i2c>50</addr_i2c>
+			<addr_port>2</addr_port>
+		</holoprojector>
+
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 3 - Servo X</name>
+			<loc lang="en">Pie Panel 3</loc>
+			<desc lang="en">Top HP, Upper HP</desc>
+			<code>HP3X</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>14</addr_port>
+		</holoprojector>
+  
+		<holoprojector category="hpservo">
+			<name lang="en">Holoprojector 3 - Servo Y</name>
+			<loc lang="en">Pie Panel 3</loc>
+			<desc lang="en">Top HP, Upper HP</desc>
+			<code>HP3Y</code>
+			<connected>true</connected>
+			<addr_i2c>41</addr_i2c>
+			<addr_port>15</addr_port>
+		</holoprojector>
+	</holoprojectors>
+</devices>
