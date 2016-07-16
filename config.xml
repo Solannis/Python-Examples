@@ -203,7 +203,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 1</name>
-			<loc lang="en">Tall panel nearest right leg, front</loc>
+			<loc lang="en">Tall panel nearest right leg (front)</loc>
 			<desc lang="en">Typical location of CPU Probe arm</desc>
 			<code>BP01</code>
 			<connected>true</connected>
@@ -213,7 +213,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 2</name>
-			<loc lang="en">Small panel below Utility Arms, above Coin Slots, front</loc>
+			<loc lang="en">Small panel below Utility Arms, above Coin Slots (front)</loc>
 			<desc lang="en">Typical location of Upper Charge Bay and Zapper Arm</desc>
 			<code>BP02</code>
 			<connected>true</connected>
@@ -223,7 +223,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 3</name>
-			<loc lang="en">Panel below Upper Charge Bay, next to Coin Slots, front</loc>
+			<loc lang="en">Panel below Upper Charge Bay, next to Coin Slots (front)</loc>
 			<desc lang="en">Typical location of Lower Charge Bay</desc>
 			<code>BP03</code>
 			<connected>true</connected>
@@ -233,7 +233,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 4</name>
-			<loc lang="en">Medium panel under Utility Arms, next to Front Vents, front</loc>
+			<loc lang="en">Medium panel under Utility Arms, next to Front Vents (front)</loc>
 			<desc lang="en">Typical location of Data Panel and Saw Blade Arm</desc>
 			<code>BP04</code>
 			<connected>true</connected>
@@ -243,7 +243,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 5</name>
-			<loc lang="en">Tall panel nearest left leg, front</loc>
+			<loc lang="en">Tall panel nearest left leg (front)</loc>
 			<desc lang="en">Typical location of HD Arm</desc>
 			<code>BP05</code>
 			<connected>true</connected>
@@ -253,7 +253,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 6</name>
-			<loc lang="en">Small panel under Coin Slots and Body Panel 3, front</loc>
+			<loc lang="en">Small panel under Coin Slots and Body Panel 3 (front)</loc>
 			<desc lang="en"></desc>
 			<code>BP06</code>
 			<connected>false</connected>
@@ -263,7 +263,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 7</name>
-			<loc lang="en">Small panel under Front Vents, front</loc>
+			<loc lang="en">Small panel under Front Vents (front)</loc>
 			<desc lang="en"></desc>
 			<code>BP07</code>
 			<connected>false</connected>
@@ -273,7 +273,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 8</name>
-			<loc lang="en">Small panel under Body Panel 4, front</loc>
+			<loc lang="en">Small panel under Body Panel 4 (front)</loc>
 			<desc lang="en"></desc>
 			<code>BP08</code>
 			<connected>false</connected>
@@ -283,7 +283,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 9</name>
-			<loc lang="en">Small panel under Body Panel 5, front</loc>
+			<loc lang="en">Small panel under Body Panel 5 (front)</loc>
 			<desc lang="en"></desc>
 			<code>BP04</code>
 			<connected>false</connected>
@@ -293,7 +293,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 10</name>
-			<loc lang="en">Tall panel nearest left leg, rear</loc>
+			<loc lang="en">Tall panel nearest left leg (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP10</code>
 			<connected>false</connected>
@@ -303,7 +303,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 11</name>
-			<loc lang="en">Wide panel between tall panels, below dome, rear</loc>
+			<loc lang="en">Wide panel between tall panels, below dome (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP11</code>
 			<connected>false</connected>
@@ -313,7 +313,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 12</name>
-			<loc lang="en">Medium panel nearest Body Panel 10, under Body Panel 11, rear</loc>
+			<loc lang="en">Medium panel nearest Body Panel 10, under Body Panel 11 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP12</code>
 			<connected>false</connected>
@@ -323,7 +323,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 13</name>
-			<loc lang="en">Medium panel, center, under Body Panel 11, rear</loc>
+			<loc lang="en">Medium panel, center, under Body Panel 11 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP13</code>
 			<connected>false</connected>
@@ -333,7 +333,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 14</name>
-			<loc lang="en">Medium panel nearest Body Panel 15, under Body Panel 11, rear</loc>
+			<loc lang="en">Medium panel nearest Body Panel 15, under Body Panel 11 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP14</code>
 			<connected>false</connected>
@@ -343,7 +343,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 15</name>
-			<loc lang="en">Tall panel nearest right leg, rear</loc>
+			<loc lang="en">Tall panel nearest right leg (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP15</code>
 			<connected>false</connected>
@@ -353,7 +353,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 16</name>
-			<loc lang="en">Small panel under Body Panel 12, rear</loc>
+			<loc lang="en">Small panel under Body Panel 12 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP16</code>
 			<connected>false</connected>
@@ -363,7 +363,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 17</name>
-			<loc lang="en">Small panel under Body Panel 13, rear</loc>
+			<loc lang="en">Small panel under Body Panel 13 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP17</code>
 			<connected>false</connected>
@@ -373,7 +373,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 18</name>
-			<loc lang="en">Small panel under Body Panel 14, rear</loc>
+			<loc lang="en">Small panel under Body Panel 14 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP18</code>
 			<connected>false</connected>
@@ -383,7 +383,7 @@
 
 		<panel category="body">
 			<name lang="en">Body Panel 19</name>
-			<loc lang="en">Small under Body Panel 15, rear</loc>
+			<loc lang="en">Small under Body Panel 15 (rear)</loc>
 			<desc lang="en"></desc>
 			<code>BP19</code>
 			<connected>false</connected>
