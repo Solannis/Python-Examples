@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hosts>
+	<master>
+		<mastername>pie_a</mastername>
+		<masterkey>ABCD1234</masterkey>
+		<commandport>54321</commandport>
+	</master>
+	<remote>
+		<remotename>pie_b</remotename>
+		<remotekey>WXYZ6789</remotekey>
+		<remoteport>12345</remoteport>
+	</remote>
+	<flag>
+		<masterflag>true</masterflag>
+	</flag>
+</hosts>
