@@ -14,6 +14,7 @@ import socket                   # Import the socket module
 import sys                      # Import the system module
 import threading                # Import the threading module
 import xml.sax                  # Import the XML reading module
+import pyasn1                   # Import the RSA Python module
 
 global_host = ""
 global_port = 12345
