@@ -25,7 +25,7 @@ global_clientKeyFilePrivate = "ClientKey_private.PEM"
 global_serverKeyFilePublic = "ServerKey_public.PEM"
 
 #
-# Thought process:
+# Client Startup Process
 #
 # 1) Check for keys:
 #   If keys are absent, go on to step 2.
@@ -111,7 +111,7 @@ class KeyManager:
         return allKeysFound
         
     #
-    # Client Key Generator
+    # Client Key Generator Function
     #
     # Decision process:
     # If Private:True and Public:True, there is no need to generate keys.
@@ -119,6 +119,8 @@ class KeyManager:
     # If Private:False and Public:True, generate both keys new.
     # If Private:False and Public:False, generate both keys new.
     #
+    def KeyGenBoth(self):
+        
 
 class ClientSocket:
     'ClientSocket class to represent client connection service'
