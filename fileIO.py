@@ -19,3 +19,4 @@ print "Softspace flag: ", readFile.softspace
 readString = readFile.read(100)
 print "Reading content from file: ", readString
 readFile.close()
+print "Closed or not: ", readFile.closed
