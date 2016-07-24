@@ -48,7 +48,7 @@ class ChatConfig:
         self.string = self.string + "</%s>\n" % (self.section)
         return self.string
 
-cc = ChatConfig()
-print cc.ToString()
+#cc = ChatConfig()
+#print cc.ToString()
 
 

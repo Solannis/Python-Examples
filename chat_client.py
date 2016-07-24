@@ -16,6 +16,9 @@ import socket                   # Import the socket module
 import sys                      # Import the system module
 import threading                # Import the threading module
 import xml.sax                  # Import the XML reading module
+from write_xml import ChatConfig                # Import the write_xml Python file
+from write_xml import ServerSection
+from write_xml import ClientSection
 
 global_host = ""
 global_port = 12345
@@ -258,6 +261,10 @@ class ConfigurationManager:
         self.readMode = "r"
         self.writeMode = "w"
         self.chatConfig = ChatConfiguration()
+        self.serverName = ""
+        self.listenerPort = 0
+        self.clientName = ""
+        self.serverPort = 0
 
     #
     # Check to see if the configuration fie is present or not.
@@ -268,11 +275,40 @@ class ConfigurationManager:
             readFile = open(self.configFile, self.readMode)
             readFile.close()
             filePresent = True
+            print "ConfigurationCheck: Configuration file is present."
         except IOError:
-            print "ConfigurationCheck: No configuration file found."
-        return keyPresent
-    
-    
+            print "ConfigurationCheck: Configuration file is missing."
+        
+        if (not filePresent):
+            #
+            # Create the configuration file
+            #
+            cc = ChatConfig()
+            self.SaveConfigFile(cc.ToString())
+            #
+            # Load the values into local variables
+            #
+            self.serverName = cc.ss.serverName[1]
+            self.listenerPort = cc.ss.listenerPort[1]
+            self.clientName = cc.cs.clientName[1]
+            self.serverPort = cc.cs.serverPort[1]
+            # print "SN: %s, LP: %d, CN: %s, SP: %d" % (self.serverName, self.listenerPort, self.clientName, self.serverPort)
+        else:
+            #
+            # Load the configu
+            #
+
+    def SaveConfigFile(self, configData):
+        try:
+            writeFile = open(self.configFile, self.writeMode)
+            writeFile.write(configData)
+            writeFile.close()
+            print "SaveConfigFile: Configuration file has been saved."
+        except IOError:
+            print "SaveConfigFile: Error while saving configuration file."
+        finally:        
+            return
+
 
 
 class ClientSocket:
@@ -296,7 +332,8 @@ class ClientSocket:
 
 km = KeyManager()
 km.KeyCheck()
-
+cm = ConfigurationManager()
+cm.ConfigurationCheck()
 
 #cs = ClientSocket(global_host, global_port)
 #cs.ClientStart()
