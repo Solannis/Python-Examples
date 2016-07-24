@@ -24,6 +24,7 @@ class ServerSocket:
         self.hostName = socket.gethostname()        # Get hostname from the socket, assign it to variable
         self.hostPort = portNumber                  # Get port nubmer argument, assign it to variable
         self.connections = connectionCount          # Get connection count argument, assign it to variable
+        print "Hostname: ", self.hostName
 
     #
     # Start the server

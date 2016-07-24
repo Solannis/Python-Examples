@@ -19,8 +19,7 @@ import xml.sax                  # Import the XML reading module
 
 global_host = ""
 global_port = 12345
-global_configSystemFile = "config_system.xml"
-global_configDevicesFile = "config_devices.xml"
+global_configChatFile = "config_chat.xml"
 
 #
 # Client Startup Process
@@ -34,11 +33,13 @@ global_configDevicesFile = "config_devices.xml"
 #
 # 3) Load keys.
 # 
-# 4) Load system configuration XML file.
+# 4) Check for chat configuration file.
+#   If chat configuration file is absent, go on to step 5.
+#   If chat configuration file is present, go on to step 6.
 # 
-# 5) Set up socket connection.
+# 5) Create default chat configuration file.
 #
-# 6) Start chatting with server.
+# 6) Load chat configuration file.
 #
 
 class KeyManager:
@@ -178,7 +179,10 @@ class KeyManager:
             #
             print "KeyCheck: Private key is missing. Public key is missing. Generating new key pair."
             self.KeyGen()
-            
+
+    #
+    # Load a key from a file into an object.
+    #
     def KeyLoad(self, keyFile, keyType, keyClass):
         try:
             readFile = open(keyFile, self.keyReadMode)
@@ -197,6 +201,9 @@ class KeyManager:
         print "KeyLoad: %s %s key loaded." % (keyType, keyClass)
         return loadedKey
 
+    #
+    # Save a key from an object to a file.
+    #
     def KeySave(self, keyData, keyFile, keyType, keyClass):
         try:
             writeFile = open(keyFile, self.keyWriteMode)
@@ -208,7 +215,10 @@ class KeyManager:
             print "KeySave: Error while saving %s %s key. No key was saved." % (keyType, keyClass)
         finally:
             return
-        
+
+    #
+    # Generate a new pair of keys.
+    #
     def KeyGen(self):
         (keyPub, keyPriv) = rsa.newkeys(512)
         print "KeyGen: New keys generated."
@@ -217,6 +227,53 @@ class KeyManager:
         self.KeySave(self.clientKeyPrivate, self.clientKeyFilePrivate, self.keyTypeClient, self.keyClassPrivate)
         self.KeySave(self.clientKeyPublic, self.clientKeyFilePublic, self.keyTypeClient, self.keyClassPublic)
         print "KeyGen: New keys saved successfully."
+
+
+class ChatConfiguration:
+    #
+    # Initialization function
+    #
+    def __init__(self):
+        self.serverName = ""
+        self.listenerPort = 0
+        self.clientName = ""
+        self.serverPort = 0
+
+    #
+    # Display this object's data.
+    #
+    def ToString(self):
+        print "  Server Name: ", self.serverName
+        print "Listener Port: ", self.listenerPort
+        print "  Client Name: ", self.clientPort
+        print "  Server Port: ", self.serverPort
+
+        
+class ConfigurationManager:
+    #
+    # Initialization function
+    #
+    def __init__(self):
+        self.configFile = "config_chat.xml"
+        self.readMode = "r"
+        self.writeMode = "w"
+        self.chatConfig = ChatConfiguration()
+
+    #
+    # Check to see if the configuration fie is present or not.
+    #
+    def ConfigurationCheck(self):
+        filePresent = False
+        try:
+            readFile = open(self.configFile, self.readMode)
+            readFile.close()
+            filePresent = True
+        except IOError:
+            print "ConfigurationCheck: No configuration file found."
+        return keyPresent
+    
+    
+
 
 class ClientSocket:
     'ClientSocket class to represent client connection service'
@@ -239,7 +296,7 @@ class ClientSocket:
 
 km = KeyManager()
 km.KeyCheck()
-print km.clientKeyPublic
+
 
 #cs = ClientSocket(global_host, global_port)
 #cs.ClientStart()
