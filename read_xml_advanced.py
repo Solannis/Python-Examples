@@ -37,6 +37,7 @@ class XMLDeviceHandler(xml.sax.ContentHandler):
         
     def startElement(self, tag, attributes):
         self.CurrentData = tag
+        print "startElement: Tag: %s, Attributes: %s" % (tag, attributes)
         if tag == "panel":
             print "=========Panel========="
             category = attributes["category"]
@@ -55,6 +56,7 @@ class XMLDeviceHandler(xml.sax.ContentHandler):
         deviceList.append(newDevice)
 
     def endElement(self, tag):
+        print "endElement: Tag: ", tag 
         currentDevice = deviceList[len(deviceList) - 1]
         if self.CurrentData == "name":
             print "        Name: ", self.name
@@ -80,6 +82,7 @@ class XMLDeviceHandler(xml.sax.ContentHandler):
         self.CurrentData = ""
 
     def characters(self, content):
+        print "characters: Content: ", content
         if self.CurrentData == "name":
             self.name = content
         elif self.CurrentData == "loc":
@@ -102,7 +105,7 @@ if (__name__ == "__main__"):
     parser.setFeature(xml.sax.handler.feature_namespaces, 0)
     Handler = XMLDeviceHandler()
     parser.setContentHandler(Handler)
-    parser.parse("config.xml")
+    parser.parse("config_devices.xml")
     print "\n\n"
     print "Found %d devices." % (len(deviceList))
     print "\n"

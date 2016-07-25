@@ -281,12 +281,12 @@ class ConfigurationManager:
         
         if (not filePresent):
             #
-            # Create the configuration file
+            # Create the configuration file.
             #
             cc = ChatConfig()
             self.SaveConfigFile(cc.ToString())
             #
-            # Load the values into local variables
+            # Load the values into local variables.
             #
             self.serverName = cc.ss.serverName[1]
             self.listenerPort = cc.ss.listenerPort[1]
@@ -295,7 +295,7 @@ class ConfigurationManager:
             # print "SN: %s, LP: %d, CN: %s, SP: %d" % (self.serverName, self.listenerPort, self.clientName, self.serverPort)
         else:
             #
-            # Load the configu
+            # Load the configuration file.
             #
 
     def SaveConfigFile(self, configData):
