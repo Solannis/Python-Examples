@@ -346,14 +346,24 @@ class ClientSocket:
         print 'Client: Connection established'
         self.messageIncoming = self.clientSocket.recv(1024)
         print "Client: message received: %s" % self.messageIncoming
-        self.clientSocket.close
-        print 'Client: connection closed'
+        while True:
+            self.messageOutgoing = raw_input("> ")
+            if (self.messageOutgoing == "exit"):
+                self.clientSocket.send(self.messageOutgoing)
+                self.clientSocket.close
+                sys.exit()
+            self.clientSocket.send(self.messageOutgoing)
+            self.messageIncoming = self.clientSocket.recv(1024)
+            print "Server response: ", self.messageIncoming
+
 
 
 km = KeyManager()
 km.KeyCheck()
 cm = ConfigurationManager()
 cm.ConfigurationCheck()
+cs = ClientSocket(cm.serverName, cm.serverPort)
+cs.ClientStart()
 
 #cs = ClientSocket(global_host, global_port)
 #cs.ClientStart()

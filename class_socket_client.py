@@ -17,6 +17,7 @@ class ClientSocket:
         self.clientSocket = socket.socket()
         self.hostName = socket.gethostname()
         self.hostPort = portNumber
+        print "Host Name: ", self.hostName
         
     def ClientStart(self):
         print '\n=========='
