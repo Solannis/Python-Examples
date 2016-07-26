@@ -8,8 +8,8 @@ class ServerConfig:
         self.listenerPort = 0
 
     def ToString(self):
-        self.string = "Server Name: ", self.serverName
-        self.string = self.string + "\nListener Port: " + str(self.listenerPort)
+        self.string = "Server Name: %s" % (self.serverName)
+        self.string = self.string + "\nListener Port: %d" % (self.listenerPort)
         return self.string
 
 class ClientConfig:
@@ -18,8 +18,8 @@ class ClientConfig:
         self.serverPort = 0
 
     def ToString(self):
-        self.string = "Client Name: ", self.clientName
-        self.string = self.string + "Server Port: " + str(self.serverPort)
+        self.string = "Client Name: %s" % (self.clientName)
+        self.string = self.string + "\nServer Port: %d" % (self.serverPort)
         return self.string
 
 class XMLConfigHandler(xml.sax.ContentHandler):
@@ -35,7 +35,6 @@ class XMLConfigHandler(xml.sax.ContentHandler):
         self.CurrentData = ""
 
     def characters(self, content):
-        print "[" + content + "]"
         if self.CurrentData == "servername":
             self.sc.serverName = content
         elif self.CurrentData == "listenerport":
@@ -45,12 +44,28 @@ class XMLConfigHandler(xml.sax.ContentHandler):
         elif self.CurrentData == "serverport":
             self.cc.serverPort = int(content)
 
+class ConfigParser:
+    def __init__(self):
+        self.parser = None
+        self.Handler = None
+        
+    def ParseConfig(self):
+        self.parser = xml.sax.make_parser()
+        self.parser.setFeature(xml.sax.handler.feature_namespaces, 0)
+        self.Handler = XMLConfigHandler()
+        self.parser.setContentHandler(self.Handler)
+        self.parser.parse("config_chat.xml")
+
+#
+# NOTE: NEED CODE TO DEAL WITH CORRUPTED/PARTIAL/INVALID CONFIGURATION FILE
+#
+
+
+""""
 if (__name__ == "__main__"):
-    parser = xml.sax.make_parser()
-    parser.setFeature(xml.sax.handler.feature_namespaces, 0)
-    Handler = XMLConfigHandler()
-    parser.setContentHandler(Handler)
-    parser.parse("config_chat.xml")
+    cp = ConfigParser()
+    cp.ParseConfig()
     print "\n\n"
-    print Handler.sc.ToString()
-    print Handler.cc.ToString()
+    print cp.Handler.sc.ToString()
+    print cp.Handler.cc.ToString()
+"""

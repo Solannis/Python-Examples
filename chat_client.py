@@ -19,6 +19,10 @@ import xml.sax                  # Import the XML reading module
 from write_xml import ChatConfig                # Import the write_xml Python file
 from write_xml import ServerSection
 from write_xml import ClientSection
+from read_chat_config import ServerConfig       # Import the read_chat_config Python file
+from read_chat_config import ClientConfig
+from read_chat_config import XMLConfigHandler
+from read_chat_config import ConfigParser
 
 global_host = ""
 global_port = 12345
@@ -41,9 +45,11 @@ global_configChatFile = "config_chat.xml"
 #   If chat configuration file is present, go on to step 6.
 # 
 # 5) Create default chat configuration file.
+#   Go on to step 7
 #
 # 6) Load chat configuration file.
 #
+# 7) Attempt to connect with the server.
 
 class KeyManager:
     #
@@ -297,6 +303,20 @@ class ConfigurationManager:
             #
             # Load the configuration file.
             #
+            cp = ConfigParser()
+            cp.ParseConfig()
+            #
+            # NOTE: NEED CODE TO DEAL WITH CORRUPTED/PARTIAL/INVALID CONFIGURATION FILE.
+            # THIS CODE BELONGS IN read_chat_config.py.
+            #
+            # MAYBE A VERIFY FUNCTION THAT IS RUN BEFORE THE cp.ParseConfig FUNCTION.
+            #
+            self.serverName = cp.Handler.sc.serverName
+            self.listenerPort = cp.Handler.sc.listenerPort
+            self.clientName = cp.Handler.cc.clientName
+            self.serverPort = cp.Handler.cc.serverPort
+            print "ConfigurationCheck: Configuration file loaded."
+
 
     def SaveConfigFile(self, configData):
         try:
