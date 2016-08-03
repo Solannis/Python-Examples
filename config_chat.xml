@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chatconfig>
-    <server>
-        <servername>MitchelRetina5K</servername>
-        <serverkey_public>ABCD1234</serverkey_public>
-        <listenerport>12345</listenerport>
-    </server>
+    <master>
+        <hostname>MitchelRetina5K</hostname>
+        <hostport>49155</hostport>
+		<hostkeyfile>ServerKey_private.PEM</hostkeyfile>
+    </master>
+    <remote>
+        <hostname>MitchelRetina5K</hostname>
+        <hostport>49155</hostport>
+		<hostkeyfile>ServerKey_public.PEM</hostkeyfile>
+    </remote>
     <client>
-        <clientname>MitchelRetina5K</clientname>
-        <clientkey_public>WXYZ6789</clientkey_public>
-        <serverport>12345</serverport>
+        <hostname>MitcheliPhone6s</hostname>
+        <hostport>49156</hostport>
+        <hostkeyfile>ClientKey_public.PEM</hostkeyfile>
     </client>
+	<type>
+		<servertype>master</servertype>
+	</type>		
 </chatconfig>
