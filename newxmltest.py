@@ -10,7 +10,8 @@
 #   Trying a new way to read and write XML via etree/ElementTree functionality within Python.
 #
 
-import xml.etree.ElementTree as ElementTree
+from lxml import etree as ElementTree
+#import xml.etree.cElementTree as ElementTree
 
 class XMLRead:
     def __init__(self):
@@ -104,9 +105,22 @@ class WriteXML:
         self.childMasterHostport.text = self.parameters['master_hostport']
         self.childMasterHostkeyfile = ElementTree.SubElement(self.childMaster, "hostkeyfile")
         self.childMasterHostkeyfile.text = self.parameters['master_hostkeyfile']
-        self.tree = ElementTree.ElementTree(self.root)
-        self.tree.write("output.xml")
+        self.childRemoteHostname = ElementTree.SubElement(self.childRemote, "hostname")
+        self.childRemoteHostname.text = self.parameters['remote_hostname']
+        self.childRemoteHostport = ElementTree.SubElement(self.childRemote, "hostport")
+        self.childRemoteHostport.text = self.parameters['remote_hostport']
+        self.childRemoteHostkeyfile = ElementTree.SubElement(self.childRemote, "hostkeyfile")
+        self.childRemoteHostkeyfile.text = self.parameters['remote_hostkeyfile']
+        self.childClientHostname = ElementTree.SubElement(self.childClient, "hostname")
+        self.childClientHostname.text = self.parameters['client_hostname']
+        self.childClientHostport = ElementTree.SubElement(self.childClient, "hostport")
+        self.childClientHostport.text = self.parameters['client_hostport']
+        self.childClientHostkeyfile = ElementTree.SubElement(self.childClient, "hostkeyfile")
+        self.childClientHostkeyfile.text = self.parameters['client_hostkeyfile']
         
+        self.tree = ElementTree.ElementTree(self.root)
+        self.tree.write("output.xml", pretty_print=True)
+
 
 
 if __name__ == "__main__":

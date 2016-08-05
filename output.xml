@@ -1,1 +1,18 @@
-<chatconfig><master><hostname>MitchelRetina5K</hostname><hostport>49155</hostport><hostkeyfile>ServerKey_private.PEM</hostkeyfile></master><remote /><client /><type /></chatconfig>
+<chatconfig>
+  <master>
+    <hostname>MitchelRetina5K</hostname>
+    <hostport>49155</hostport>
+    <hostkeyfile>ServerKey_private.PEM</hostkeyfile>
+  </master>
+  <remote>
+    <hostname>Barney</hostname>
+    <hostport>49155</hostport>
+    <hostkeyfile>ServerKey_public.PEM</hostkeyfile>
+  </remote>
+  <client>
+    <hostname>MitcheliPhone6s</hostname>
+    <hostport>49156</hostport>
+    <hostkeyfile>ClientKey_public.PEM</hostkeyfile>
+  </client>
+  <type/>
+</chatconfig>
