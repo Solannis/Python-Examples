@@ -36,6 +36,7 @@ class XMLRead:
         for child in self.configRoot:
             for grandchild in child:
                 keyName = child.tag + "_" + grandchild.tag
+                print keyName
                 self.parameters[keyName] = grandchild.text
         return self.parameters
         
@@ -50,29 +51,72 @@ class CheckConfiguration:
         if (self.parameters.has_key('master_hostport') == False):
             self.parameters['master_hostport'] = 50000
         if (self.parameters.has_key('master_hostkeyfile') == False):
-            self.parameters['master_hostport'] = "ServerKey_private.PEM"
+            self.parameters['master_hostkeyfile'] = "ServerKey_private.PEM"
         if (self.parameters.has_key('rempte_hostname') == False):
             self.parameters['remote_hostname'] = "Barney"
         if (self.parameters.has_key('remote_hostport') == False):
             self.parameters['remote_hostport'] = 50001
         if (self.parameters.has_key('remote_hostkeyfile') == False):
-            self.parameters['remote_hostport'] = "ServerKey_public.PEM"
+            self.parameters['remote_hostkeyfile'] = "ServerKey_public.PEM"
         if (self.parameters.has_key('client_hostname') == False):
             self.parameters['client_hostname'] = "Wilma"
         if (self.parameters.has_key('client_hostport') == False):
             self.parameters['client_hostport'] = 50002
         if (self.parameters.has_key('client_hostkeyfile') == False):
-            self.parameters['client_hostport'] = "ClientKey_public.PEM"
+            self.parameters['client_hostkeyfile'] = "ClientKey_public.PEM"
+        if (self.parameters.has_key('type_servertype') == False):
+            self.parameters['server_type'] = "master"
+        return self.parameters
+        
+    def DisplayParameters(self, parameters):
+        self.parameters = parameters
+        print "Master:"
+        print "\tmaster_hostname: %s" % (self.parameters['master_hostname'])
+        print "\tmaster_hostport: %s" % (self.parameters['master_hostport'])
+        print "\tmaster_hostkeyfile: %s" % (self.parameters['master_hostkeyfile'])
+        print "Remote:"
+        print "\tremote_hostname: %s" % (self.parameters['remote_hostname'])
+        print "\tremote_hostport: %s" % (self.parameters['remote_hostport'])
+        print "\tremote_hostkeyfile: %s" % (self.parameters['remote_hostkeyfile'])
+        print "Client:"
+        print "\tmaster_hostname: %s" % (self.parameters['client_hostname'])
+        print "\tmaster_hostport: %s" % (self.parameters['client_hostport'])
+        print "\tmaster_hostkeyfile: %s" % (self.parameters['client_hostkeyfile'])
+        print "Type:"
+        print "\tserver_type: %s" % (self.parameters['type_servertype'])
 
-***** Working here
-            
+class WriteXML:
+    def __init__(self):
+        self.parameters = {}
+        self.root = None
+        self.tree = None
+        
+    def BuildXML(self, parameters):
+        self.parameters = parameters
+        self.root = ElementTree.Element('chatconfig')
+        self.childMaster = ElementTree.SubElement(self.root, "master")
+        self.childRemote = ElementTree.SubElement(self.root, "remote")
+        self.childClient = ElementTree.SubElement(self.root, "client")
+        self.childType = ElementTree.SubElement(self.root, "type")
+        self.childMasterHostname = ElementTree.SubElement(self.childMaster, "hostname")
+        self.childMasterHostname.text = self.parameters['master_hostname']
+        self.childMasterHostport = ElementTree.SubElement(self.childMaster, "hostport")
+        self.childMasterHostport.text = self.parameters['master_hostport']
+        self.childMasterHostkeyfile = ElementTree.SubElement(self.childMaster, "hostkeyfile")
+        self.childMasterHostkeyfile.text = self.parameters['master_hostkeyfile']
+        self.tree = ElementTree.ElementTree(self.root)
+        self.tree.write("output.xml")
+        
+
 
 if __name__ == "__main__":
-    xmlReader = XMLRead()
-    configTree = xmlReader.ReadConfig()
-    xmlShower = XMLShow()
-    xmlShower.ShowConfig(configTree)
-
+    xr = XMLRead()
+    configParameters = xr.ReadConfig()
+    cc = CheckConfiguration()
+    configParameters = cc.CheckConfig(configParameters)
+    cc.DisplayParameters(configParameters)
+    wx = WriteXML()
+    wx.BuildXML(configParameters)
 
 """
 print root[0].attrib
