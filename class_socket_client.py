@@ -6,8 +6,9 @@
 import socket                   # Import the socket module
 import threading                # Import the threading module
 
-global_host = ""
-global_port = 12345
+#global_host = "raspberrypi_b"
+global_host = "MitchelRetina5K"
+global_port = 49152
 
 
 class ClientSocket:
@@ -15,9 +16,12 @@ class ClientSocket:
     
     def __init__(self, hostName, portNumber):
         self.clientSocket = socket.socket()
-        self.hostName = socket.gethostname()
+#        self.hostName = socket.gethostname()
+#        self.hostName = "raspberrypi_b"
+        self.hostName = hostName
         self.hostPort = portNumber
         print "Host Name: ", self.hostName
+        print "Host Port: ", self.hostPort
         
     def ClientStart(self):
         print '\n=========='

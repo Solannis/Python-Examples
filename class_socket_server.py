@@ -10,7 +10,7 @@ import threading                # Import the threading module
 # Define some global variables
 #
 global_host = ""                # Detaulf global host name
-global_port = 12345             # Default global host port nubmer (to listen on)
+global_port = 49152             # Default global host port nubmer (to listen on)
 global_connections = 5          # Default global connection count (how many simultaneous connections are allowed)
 
 class ServerSocket:
@@ -25,6 +25,8 @@ class ServerSocket:
         self.hostPort = portNumber                  # Get port nubmer argument, assign it to variable
         self.connections = connectionCount          # Get connection count argument, assign it to variable
         print "Hostname: ", self.hostName
+        print "Hostport: ", self.hostPort
+        print "Connects: ", self.connections
 
     #
     # Start the server
